@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #090d16;
+    background-color: #0b0f19;
     color: #f1f5f9;
 }
 
@@ -10,13 +10,23 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
 }
 
-/* Opaque Header Navigation */
+/* Opaque Header Navigation with distinct color and divider */
 .site-header {
-    background-color: #090d16;
+    background-color: #04070d; /* Distinct header shade */
     border-bottom: 1px solid #1e293b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Card Surface with Hover Animations */
+/* Active Nav Item Pill Highlight */
+.nav-link.active {
+    color: #818cf8 !important;
+    background-color: rgba(99, 102, 241, 0.18);
+    border: 1px solid rgba(99, 102, 241, 0.35);
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+/* Card Surface Container */
 .clean-card {
     background-color: #111827;
     border: 1px solid #1e293b;
@@ -28,10 +38,10 @@ h1, h2, h3, h4, h5, h6 {
 .clean-card:hover {
     transform: translateY(-3px);
     border-color: #6366f1;
-    box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.25);
 }
 
-/* Timeline Left Accents */
+/* Experience & Education Left Accents */
 .experience-card {
     border-left: 3px solid #6366f1;
 }
@@ -40,13 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     border-left: 3px solid #a855f7;
 }
 
-/* Active Nav Link Highlight */
-.nav-link.active {
-    color: #818cf8;
-    background-color: rgba(30, 41, 59, 0.6);
-}
-
 /* Alternating Section Background */
 .section-alt {
-    background-color: #0c111d;
+    background-color: #0e1422;
 }

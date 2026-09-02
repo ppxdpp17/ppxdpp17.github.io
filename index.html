@@ -1,1 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pedro Duarte - Junior Software Developer & MSc in Informatics Engineering Student. Portfolio featuring IoT telemetry, full-stack, mobile, AI, and game development projects.">
+    <meta name="author" content="Pedro Duarte">
+    <title>Pedro Duarte | Software Developer</title>
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        },
+                        cyanAccent: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #090d16;
+            color: #f1f5f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        /* Glassmorphic card styling */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
+        }
+        
+        .glass-nav {
+            background: rgba(9, 13, 22, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Custom Glowing Effect */
+        .glow-bg {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            opacity: 0.25;
+        }
+        
+        /* Custom Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Timeline line styling */
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+        }
+        
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen text-slate-200 antialiased overflow-x-hidden selection:bg-indigo-500 selection:text-white">
 
+    <!-- Background Decorative Glow Orbs -->
+    <div class="glow-bg w-96 h-96 bg-indigo-600 top-0 left-1/4 -translate-x-1/2"></div>
+    <div class="glow-bg w-96 h-96 bg-purple-600 top-1/3 right-10"></div>
+    <div class="glow-bg w-[500px] h-[500px] bg-cyan-600 bottom-1/4 left-10"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#about" class="text-xl sm:text-2xl font-bold font-heading text-white tracking-wider flex items-center gap-2 group">
+                    <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                        PD
+                    </span>
+                    <span class="group-hover:text-indigo-400 transition-colors">Pedro Duarte</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+                    <a href="#about" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all">About</a>
+                    <a href="#experience" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all">Experience & Education</a>
+                    <a href="#projects" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all">Projects</a>
+                    <a href="#skills" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all">Skills</a>
+                    <a href="#contact" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all">Contact</a>
+                    <a href="mailto:pedrosapageduarte@hotmail.com" class="ml-4 px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-xl shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transition-all hover:-translate-y-0.5 active:translate-y-0">
+                        Get in Touch
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-xl bg-slate-800/60 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2">
+            <a href="#about" class="mobile-nav-link block px-4 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl transition-all">About</a>
+            <a href="#experience" class="mobile-nav-link block px-4 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl transition-all">Experience & Education</a>
+            <a href="#projects" class="mobile-nav-link block px-4 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl transition-all">Projects</a>
+            <a href="#skills" class="mobile-nav-link block px-4 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl transition-all">Skills</a>
+            <a href="#contact" class="mobile-nav-link block px-4 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl transition-all">Contact</a>
+            <div class="pt-2">
+                <a href="mailto:pedrosapageduarte@hotmail.com" class="block w-full text-center px-4 py-3 text-base font-medium text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl shadow-lg">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-32 py-12">
+
+        <!-- Hero / About Me Section -->
+        <section id="about" class="pt-8 sm:pt-16 pb-6 min-h-[80vh] flex flex-col justify-center relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column: Content -->
+                <div class="lg:col-span-8 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Available for Engineering Opportunities
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                        Hi, I'm <span class="gradient-text">Pedro Duarte</span>
+                    </h1>
+
+                    <h2 class="text-xl sm:text-2xl font-medium text-slate-300">
+                        Junior Software Developer <span class="text-indigo-400 font-normal">|</span> MSc in Informatics Engineering
+                    </h2>
+
+                    <p class="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                        Software Developer completing an MSc in Informatics Engineering at <span class="text-slate-200 font-medium">UTAD</span>. 
+                        Background in full-stack development, mobile/Android applications, and IoT telemetry systems for green mobility & rider safety.
+                    </p>
+
+                    <!-- CTAs & Social Links -->
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 text-white font-medium text-sm sm:text-base shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-2 group">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl glass-card text-slate-200 hover:text-white hover:bg-slate-800/80 font-medium text-sm sm:text-base transition-all">
+                            Contact Me
+                        </a>
+
+                        <!-- Social Icon Links -->
+                        <div class="flex items-center gap-3 ml-0 sm:ml-2 pt-2 sm:pt-0">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl glass-card flex items-center justify-center text-slate-300 hover:text-white hover:bg-indigo-600/30 hover:border-indigo-500/50 transition-all text-xl" title="GitHub" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl glass-card flex items-center justify-center text-slate-300 hover:text-white hover:bg-indigo-600/30 hover:border-indigo-500/50 transition-all text-xl" title="LinkedIn" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:pedrosapageduarte@hotmail.com" class="w-11 h-11 rounded-xl glass-card flex items-center justify-center text-slate-300 hover:text-white hover:bg-indigo-600/30 hover:border-indigo-500/50 transition-all text-xl" title="Email" aria-label="Send Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Card -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Ambient Glow -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
+                        
+                        <div class="relative glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <span class="text-xs font-mono text-slate-500">developer.json</span>
+                            </div>
+
+                            <div class="space-y-3 font-mono text-xs sm:text-sm">
+                                <p class="text-purple-400">&lt;<span class="text-indigo-400">DeveloperInfo</span>&gt;</p>
+                                <div class="pl-4 space-y-1.5 text-slate-300">
+                                    <p><span class="text-slate-500">location:</span> <span class="text-emerald-400">"Vila Real, Portugal"</span></p>
+                                    <p><span class="text-slate-500">education:</span> <span class="text-cyan-400">"UTAD MSc Candidate"</span></p>
+                                    <p><span class="text-slate-500">core_focus:</span> <span class="text-yellow-400">["IoT", "Mobile", "Full-Stack"]</span></p>
+                                    <p><span class="text-slate-500">status:</span> <span class="text-indigo-400">"Building & Integrating"</span></p>
+                                </div>
+                                <p class="text-purple-400">&lt;/<span class="text-indigo-400">DeveloperInfo</span>&gt;</p>
+                            </div>
+
+                            <div class="pt-2 grid grid-cols-2 gap-3 text-center">
+                                <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
+                                    <span class="block text-2xl font-bold text-indigo-400 font-heading">2+</span>
+                                    <span class="text-xs text-slate-400">R&D Grants</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
+                                    <span class="block text-2xl font-bold text-purple-400 font-heading">6+</span>
+                                    <span class="text-xs text-slate-400">Key Projects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Professional Experience (Combined Section) -->
+        <section id="experience" class="scroll-mt-24 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase">Career Pathway</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Experience & Education</h2>
+                <p class="text-slate-400 text-sm sm:text-base">My academic journey and research role contributions at UTAD.</p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative max-w-4xl mx-auto px-2">
+                <!-- Vertical Line -->
+                <div class="timeline-line"></div>
+
+                <div class="space-y-12">
+                    
+                    <!-- Item 1: Experience (Oct 2025 - Jun 2026) -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <!-- Circle Marker -->
+                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-indigo-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-indigo-500/50 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        
+                        <!-- Content Box Left -->
+                        <div class="w-full md:w-1/2 pl-14 md:pl-0 md:pr-12 md:text-right">
+                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                                    Oct 2025 - Jun 2026
+                                </span>
+                                <h3 class="text-xl font-bold text-white">Researcher & Software Developer</h3>
+                                <p class="text-indigo-300 font-medium text-sm">A-MoVeR Green Mobility Project</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Software integration team (Grant <span class="text-slate-300 font-mono text-xs">BI/UTAD/54/2025</span>). Focusing on system architecture integration and software telemetry components for sustainable mobility.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+
+                    <!-- Item 2: Education MSc (Sep 2024 - Current) -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <!-- Circle Marker -->
+                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-purple-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-purple-500/50 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <!-- Content Box Right -->
+                        <div class="w-full md:w-1/2 pl-14 md:pl-12 text-left">
+                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                    Sep 2024 - Current
+                                </span>
+                                <h3 class="text-xl font-bold text-white">MSc in Informatics Engineering</h3>
+                                <p class="text-purple-300 font-medium text-sm">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Advanced studies specializing in advanced software engineering, distributed systems, mobile development, and intelligent systems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Experience (Mar 2024 - Mar 2025) -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <!-- Circle Marker -->
+                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-indigo-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-indigo-500/50 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <!-- Content Box Left -->
+                        <div class="w-full md:w-1/2 pl-14 md:pl-0 md:pr-12 md:text-right">
+                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                                    Mar 2024 - Mar 2025
+                                </span>
+                                <h3 class="text-xl font-bold text-white">Researcher & Software Developer</h3>
+                                <p class="text-indigo-300 font-medium text-sm">A-MoVeR Project - Rider Support & Safety</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Rider support and safety team (Grant <span class="text-slate-300 font-mono text-xs">BII/UTAD/8/23</span>). Developed IoT assistance devices and rider protection systems (ARAS).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+
+                    <!-- Item 4: Education BSc (Aug 2021 - Jun 2024) -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <!-- Circle Marker -->
+                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-cyan-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-cyan-500/50 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <!-- Content Box Right -->
+                        <div class="w-full md:w-1/2 pl-14 md:pl-12 text-left">
+                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                    Aug 2021 - Jun 2024
+                                </span>
+                                <h3 class="text-xl font-bold text-white">BSc in Informatics Engineering</h3>
+                                <p class="text-cyan-300 font-medium text-sm">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Comprehensive foundational computer science degree focused on algorithms, software architecture, databases, OOP, computer networks, and full-stack development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="scroll-mt-24 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase">Portfolio</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Featured Projects</h2>
+                <p class="text-slate-400 text-sm sm:text-base">A selection of research projects, mobile applications, AI systems, and web applications.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Project 1: Motorcycle Telemetry -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+                            Android Application for Motorcycle Telemetry and Data Acquisition
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Mobile application engineered for real-time telemetry data acquisition, sensor integration, and rider metrics processing.
+                        </p>
+                    </div>
+                    <div class="pt-6 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-indigo-300 font-mono">Android</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-indigo-300 font-mono">Java/Kotlin</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-indigo-300 font-mono">Telemetry</span>
+                        </div>
+                        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                                <span>View Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <span class="text-xs text-slate-500 font-mono">Mobile / IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: IoT Devices for Rider Assistance (ARAS) -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                            Development and Integration of IoT Devices for Motorcycle Rider Assistance (ARAS)
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Development and integration of hardware and software IoT modules for Advanced Rider Assistance Systems within the A-MoVeR project.
+                        </p>
+                    </div>
+                    <div class="pt-6 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-purple-300 font-mono">C/C++</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-purple-300 font-mono">IoT</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-purple-300 font-mono">Embedded</span>
+                        </div>
+                        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-purple-400 hover:text-purple-300 flex items-center gap-1.5">
+                                <span>View Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <span class="text-xs text-slate-500 font-mono">ARAS / Embedded</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Big Bobs Website -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-pizza-slice"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                            "Big Bobs" - Portuguese Pizzeria Concept Website
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Full-stack web application concept for a Portuguese pizzeria, featuring interactive ordering, menu management, and responsive frontend UI.
+                        </p>
+                    </div>
+                    <div class="pt-6 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-cyan-300 font-mono">Node.js</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-cyan-300 font-mono">JavaScript</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-cyan-300 font-mono">Web App</span>
+                        </div>
+                        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                                <span>View Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <span class="text-xs text-slate-500 font-mono">Full-Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Go Board Game -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-chess-board"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                            "Go" Board Game - Developed with Three.js
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            3D interactive rendition of the traditional "Go" strategy board game built with JavaScript and Three.js webGL graphics.
+                        </p>
+                    </div>
+                    <div class="pt-6 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-emerald-300 font-mono">Three.js</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-emerald-300 font-mono">JavaScript</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-emerald-300 font-mono">3D Graphics</span>
+                        </div>
+                        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+                                <span>View Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <span class="text-xs text-slate-500 font-mono">Graphics / WebGL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Esports Betting Prediction AI Model -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                            Esports Betting Prediction AI Model
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Machine learning predictive model built with Python to analyze historical competitive esports data and generate probabilistic outcome predictions.
+                        </p>
+                    </div>
+                    <div class="pt-6 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-amber-300 font-mono">Python</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-amber-300 font-mono">Scikit-Learn</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-amber-300 font-mono">Data Science</span>
+                        </div>
+                        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+                                <span>View Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <span class="text-xs text-slate-500 font-mono">AI / Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: CoD Zombies-style Game in Unity -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 text-xl group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-rose-400 transition-colors">
+                            CoD Zombies-style Game - Developed in Unity
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            First-person round-based survival game developed in Unity with C#, featuring wave mechanics, custom enemy AI behaviors, and shooting mechanics.
+                        </p>
+                    </div>
+                    <div class="pt-6 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-rose-300 font-mono">Unity</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-rose-300 font-mono">C#</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-rose-300 font-mono">Game Dev</span>
+                        </div>
+                        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-rose-400 hover:text-rose-300 flex items-center gap-1.5">
+                                <span>View Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <span class="text-xs text-slate-500 font-mono">Game Development</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="scroll-mt-24 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase">Technical Capabilities</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Skills & Toolkit</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Technologies, programming languages, and engineering tools I work with.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Category 1: Languages -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Languages</h3>
+                            <p class="text-xs text-slate-400">Core programming languages</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-indigo-500/50 transition-all">
+                            <i class="fa-solid fa-terminal text-indigo-400"></i>
+                            <span class="text-sm font-medium text-slate-200">C / C++</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-indigo-500/50 transition-all">
+                            <i class="fa-solid fa-hashtag text-purple-400"></i>
+                            <span class="text-sm font-medium text-slate-200">C#</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-indigo-500/50 transition-all">
+                            <i class="fa-brands fa-python text-yellow-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Python</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-indigo-500/50 transition-all">
+                            <i class="fa-brands fa-java text-orange-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Java</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-indigo-500/50 transition-all">
+                            <i class="fa-solid fa-database text-cyan-400"></i>
+                            <span class="text-sm font-medium text-slate-200">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Technologies & Tools -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Technologies & Tools</h3>
+                            <p class="text-xs text-slate-400">Frameworks, platforms & IDEs</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-purple-500/50 transition-all">
+                            <i class="fa-solid fa-cubes text-indigo-400"></i>
+                            <span class="text-sm font-medium text-slate-200">.NET</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-purple-500/50 transition-all">
+                            <i class="fa-brands fa-docker text-blue-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Docker</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-purple-500/50 transition-all">
+                            <i class="fa-brands fa-git-alt text-orange-500"></i>
+                            <span class="text-sm font-medium text-slate-200">Git / GitHub</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-purple-500/50 transition-all">
+                            <i class="fa-solid fa-laptop-code text-purple-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Visual Studio</span>
+                        </div>
+                        <div class="px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2.5 group hover:border-purple-500/50 transition-all">
+                            <i class="fa-brands fa-android text-emerald-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Contact Section -->
+        <section id="contact" class="scroll-mt-24 space-y-12">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="glow-bg w-72 h-72 bg-indigo-600 top-0 right-0"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    
+                    <div class="lg:col-span-6 space-y-4">
+                        <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase">Contact</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Connect & Collaborate</h2>
+                        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                            Interested in working together or discussing engineering opportunities? Feel free to reach out directly via email, phone, or LinkedIn.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Email Card -->
+                        <a href="mailto:pedrosapageduarte@hotmail.com" class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500/50 transition-all flex items-start gap-4 group">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="block text-xs text-slate-400 font-medium">Email</span>
+                                <span class="text-xs sm:text-sm font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors truncate block">
+                                    pedrosapageduarte@hotmail.com
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500/50 transition-all flex items-start gap-4 group">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors shrink-0">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-medium">LinkedIn</span>
+                                <span class="text-sm font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors">
+                                    Pedro Duarte
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- Phone Card -->
+                        <a href="tel:+351967373614" class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500/50 transition-all flex items-start gap-4 group">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-medium">Phone</span>
+                                <span class="text-sm font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors">
+                                    (+351) 967373614
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- Location Card -->
+                        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-medium">Location</span>
+                                <span class="text-sm font-semibold text-slate-200">
+                                    Vila Real, Portugal
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 py-8 bg-slate-950/80 text-slate-500 text-xs sm:text-sm text-center">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; <span id="current-year"></span> Pedro Duarte. All rights reserved.</p>
+            <div class="flex items-center gap-4 text-slate-400">
+                <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="GitHub Profile">
+                    <i class="fa-brands fa-github text-base"></i>
+                </a>
+                <a href="mailto:pedrosapageduarte@hotmail.com" class="hover:text-white transition-colors" aria-label="Send Email">
+                    <i class="fa-solid fa-envelope text-base"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Vanilla logic -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking nav links
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // IntersectionObserver for highlighting active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-indigo-400', 'bg-slate-800/80');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-indigo-400', 'bg-slate-800/80');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -52,9 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('text-indigo-400', 'bg-slate-800/80');
+            link.classList.remove('active', 'text-indigo-400');
             if (link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('text-indigo-400', 'bg-slate-800/80');
+                link.classList.add('active');
             }
         });
     };

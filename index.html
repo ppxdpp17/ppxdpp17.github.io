@@ -15,6 +15,9 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -43,68 +46,8 @@
         }
     </script>
     
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #090d16;
-            color: #f1f5f9;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Outfit', sans-serif;
-        }
-        
-        /* Glassmorphic card styling */
-        .glass-card {
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
-        }
-        
-        .glass-nav {
-            background: rgba(9, 13, 22, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        /* Custom Glowing Effect */
-        .glow-bg {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(120px);
-            pointer-events: none;
-            opacity: 0.25;
-        }
-        
-        /* Custom Gradient Text */
-        .gradient-text {
-            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        /* Timeline line styling */
-        .timeline-line {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
-        }
-        
-        @media (min-width: 768px) {
-            .timeline-line {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-    </style>
+    <!-- JS Logic -->
+    <script src="js/main.js" defer></script>
 </head>
 <body class="relative min-h-screen text-slate-200 antialiased overflow-x-hidden selection:bg-indigo-500 selection:text-white">
 
@@ -165,7 +108,7 @@
         <section id="about" class="pt-8 sm:pt-16 pb-6 min-h-[80vh] flex flex-col justify-center relative">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <!-- Left Column: Content -->
-                <div class="lg:col-span-8 space-y-6 text-left">
+                <div class="lg:col-span-7 space-y-6 text-left">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         Available for Engineering Opportunities
@@ -210,41 +153,26 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Visual Card -->
-                <div class="lg:col-span-4 flex justify-center">
-                    <div class="relative w-full max-w-sm">
-                        <!-- Ambient Glow -->
-                        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
-                        
-                        <div class="relative glass-card p-6 sm:p-8 rounded-3xl space-y-6">
-                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                </div>
-                                <span class="text-xs font-mono text-slate-500">developer.json</span>
-                            </div>
-
-                            <div class="space-y-3 font-mono text-xs sm:text-sm">
-                                <p class="text-purple-400">&lt;<span class="text-indigo-400">DeveloperInfo</span>&gt;</p>
-                                <div class="pl-4 space-y-1.5 text-slate-300">
-                                    <p><span class="text-slate-500">location:</span> <span class="text-emerald-400">"Vila Real, Portugal"</span></p>
-                                    <p><span class="text-slate-500">education:</span> <span class="text-cyan-400">"UTAD MSc Candidate"</span></p>
-                                    <p><span class="text-slate-500">core_focus:</span> <span class="text-yellow-400">["IoT", "Mobile", "Full-Stack"]</span></p>
-                                    <p><span class="text-slate-500">status:</span> <span class="text-indigo-400">"Building & Integrating"</span></p>
-                                </div>
-                                <p class="text-purple-400">&lt;/<span class="text-indigo-400">DeveloperInfo</span>&gt;</p>
-                            </div>
-
-                            <div class="pt-2 grid grid-cols-2 gap-3 text-center">
-                                <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
-                                    <span class="block text-2xl font-bold text-indigo-400 font-heading">2+</span>
-                                    <span class="text-xs text-slate-400">R&D Grants</span>
-                                </div>
-                                <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
-                                    <span class="block text-2xl font-bold text-purple-400 font-heading">6+</span>
-                                    <span class="text-xs text-slate-400">Key Projects</span>
+                <!-- Right Column: Profile Photo Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm profile-glow">
+                        <div class="glass-card p-3 rounded-3xl overflow-hidden shadow-2xl relative">
+                            <div class="w-full aspect-[4/5] rounded-2xl bg-slate-900 overflow-hidden relative group flex items-center justify-center border border-slate-800">
+                                <!-- Profile Photo Image -->
+                                <img src="assets/images/profile.jpg" 
+                                     alt="Pedro Duarte" 
+                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                     onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('photo-placeholder').classList.remove('hidden');">
+                                
+                                <!-- Fallback Placeholder UI (visible until profile.jpg is added to assets/images/) -->
+                                <div id="photo-placeholder" class="hidden flex flex-col items-center justify-center p-6 text-center space-y-4">
+                                    <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white text-4xl shadow-lg shadow-indigo-500/40">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-sm font-semibold text-slate-200">Pedro Duarte</p>
+                                        <p class="text-xs text-indigo-400 font-mono">assets/images/profile.jpg</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -253,114 +181,123 @@
             </div>
         </section>
 
-        <!-- Education & Professional Experience (Combined Section) -->
+        <!-- Education & Professional Experience (Clearly Separated Section) -->
         <section id="experience" class="scroll-mt-24 space-y-12">
             <div class="text-center space-y-3 max-w-2xl mx-auto">
                 <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase">Career Pathway</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Experience & Education</h2>
-                <p class="text-slate-400 text-sm sm:text-base">My academic journey and research role contributions at UTAD.</p>
+                <p class="text-slate-400 text-sm sm:text-base">Research grant positions and academic degree trajectory at UTAD.</p>
             </div>
 
-            <!-- Timeline Container -->
-            <div class="relative max-w-4xl mx-auto px-2">
-                <!-- Vertical Line -->
-                <div class="timeline-line"></div>
-
-                <div class="space-y-12">
-                    
-                    <!-- Item 1: Experience (Oct 2025 - Jun 2026) -->
-                    <div class="relative flex flex-col md:flex-row items-center group">
-                        <!-- Circle Marker -->
-                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-indigo-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-indigo-500/50 group-hover:scale-110 transition-transform">
+            <!-- Two Distinct Columns for Professional Experience vs Education -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Column 1: Professional Experience (Bolsas de Investigação) -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg">
                             <i class="fa-solid fa-briefcase"></i>
                         </div>
-                        
-                        <!-- Content Box Left -->
-                        <div class="w-full md:w-1/2 pl-14 md:pl-0 md:pr-12 md:text-right">
-                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
-                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Professional Experience</h3>
+                            <p class="text-xs text-indigo-400 font-medium">R&D Grants / Bolsas de Investigação</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Experience Item 1 -->
+                        <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:-translate-y-1 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
                                     Oct 2025 - Jun 2026
                                 </span>
-                                <h3 class="text-xl font-bold text-white">Researcher & Software Developer</h3>
-                                <p class="text-indigo-300 font-medium text-sm">A-MoVeR Green Mobility Project</p>
-                                <p class="text-slate-400 text-sm leading-relaxed">
-                                    Software integration team (Grant <span class="text-slate-300 font-mono text-xs">BI/UTAD/54/2025</span>). Focusing on system architecture integration and software telemetry components for sustainable mobility.
-                                </p>
+                                <span class="text-xs font-mono text-slate-500">Grant BI/UTAD/54/2025</span>
                             </div>
-                        </div>
-                        <div class="hidden md:block md:w-1/2"></div>
-                    </div>
-
-                    <!-- Item 2: Education MSc (Sep 2024 - Current) -->
-                    <div class="relative flex flex-col md:flex-row items-center group">
-                        <!-- Circle Marker -->
-                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-purple-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-purple-500/50 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-
-                        <div class="hidden md:block md:w-1/2"></div>
-                        <!-- Content Box Right -->
-                        <div class="w-full md:w-1/2 pl-14 md:pl-12 text-left">
-                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
-                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
-                                    Sep 2024 - Current
-                                </span>
-                                <h3 class="text-xl font-bold text-white">MSc in Informatics Engineering</h3>
-                                <p class="text-purple-300 font-medium text-sm">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
-                                <p class="text-slate-400 text-sm leading-relaxed">
-                                    Advanced studies specializing in advanced software engineering, distributed systems, mobile development, and intelligent systems.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3: Experience (Mar 2024 - Mar 2025) -->
-                    <div class="relative flex flex-col md:flex-row items-center group">
-                        <!-- Circle Marker -->
-                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-indigo-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-indigo-500/50 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-briefcase"></i>
+                            <h4 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+                                Researcher & Software Developer
+                            </h4>
+                            <p class="text-indigo-300 font-medium text-sm">
+                                Software Integration Team &mdash; A-MoVeR Green Mobility Project
+                            </p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Integrated into the software integration team for the A-MoVeR green mobility project, focusing on software components, system integration, and vehicle telemetry architectures.
+                            </p>
                         </div>
 
-                        <!-- Content Box Left -->
-                        <div class="w-full md:w-1/2 pl-14 md:pl-0 md:pr-12 md:text-right">
-                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
-                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                        <!-- Experience Item 2 -->
+                        <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:-translate-y-1 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
                                     Mar 2024 - Mar 2025
                                 </span>
-                                <h3 class="text-xl font-bold text-white">Researcher & Software Developer</h3>
-                                <p class="text-indigo-300 font-medium text-sm">A-MoVeR Project - Rider Support & Safety</p>
-                                <p class="text-slate-400 text-sm leading-relaxed">
-                                    Rider support and safety team (Grant <span class="text-slate-300 font-mono text-xs">BII/UTAD/8/23</span>). Developed IoT assistance devices and rider protection systems (ARAS).
-                                </p>
+                                <span class="text-xs font-mono text-slate-500">Grant BII/UTAD/8/23</span>
                             </div>
+                            <h4 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+                                Researcher & Software Developer
+                            </h4>
+                            <p class="text-indigo-300 font-medium text-sm">
+                                Rider Support & Safety Team &mdash; A-MoVeR Project
+                            </p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Contributed to rider support and safety solutions by engineering IoT assistance devices and Advanced Rider Assistance Systems (ARAS) for motorcycle platforms.
+                            </p>
                         </div>
-                        <div class="hidden md:block md:w-1/2"></div>
                     </div>
+                </div>
 
-                    <!-- Item 4: Education BSc (Aug 2021 - Jun 2024) -->
-                    <div class="relative flex flex-col md:flex-row items-center group">
-                        <!-- Circle Marker -->
-                        <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-cyan-600 border-4 border-slate-950 flex items-center justify-center text-white text-sm z-10 shadow-lg shadow-cyan-500/50 group-hover:scale-110 transition-transform">
+                <!-- Column 2: Education (Formação Académica) -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
-
-                        <div class="hidden md:block md:w-1/2"></div>
-                        <!-- Content Box Right -->
-                        <div class="w-full md:w-1/2 pl-14 md:pl-12 text-left">
-                            <div class="glass-card p-6 rounded-2xl space-y-2 hover:-translate-y-1 transition-all">
-                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                                    Aug 2021 - Jun 2024
-                                </span>
-                                <h3 class="text-xl font-bold text-white">BSc in Informatics Engineering</h3>
-                                <p class="text-cyan-300 font-medium text-sm">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
-                                <p class="text-slate-400 text-sm leading-relaxed">
-                                    Comprehensive foundational computer science degree focused on algorithms, software architecture, databases, OOP, computer networks, and full-stack development.
-                                </p>
-                            </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Education</h3>
+                            <p class="text-xs text-purple-400 font-medium">Academic Degrees / Formação Académica</p>
                         </div>
                     </div>
 
+                    <div class="space-y-6">
+                        <!-- Education Item 1 -->
+                        <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:-translate-y-1 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                    Sep 2024 - Current
+                                </span>
+                                <span class="text-xs font-mono text-slate-500">Master's Degree</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                                MSc in Informatics Engineering
+                            </h4>
+                            <p class="text-purple-300 font-medium text-sm">
+                                Universidade de Trás-os-Montes e Alto Douro (UTAD)
+                            </p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Advanced master's specialization focused on distributed systems, software engineering methodologies, intelligent systems, and mobile technology applications.
+                            </p>
+                        </div>
+
+                        <!-- Education Item 2 -->
+                        <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:-translate-y-1 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                    Aug 2021 - Jun 2024
+                                </span>
+                                <span class="text-xs font-mono text-slate-500">Bachelor's Degree</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                BSc in Informatics Engineering
+                            </h4>
+                            <p class="text-cyan-300 font-medium text-sm">
+                                Universidade de Trás-os-Montes e Alto Douro (UTAD)
+                            </p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Core engineering degree covering object-oriented programming, data structures, algorithms, databases, computer networks, graphics, and full-stack software development.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -725,59 +662,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript Vanilla logic -->
-    <script>
-        // Set dynamic current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            } else {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-xmark');
-            }
-        });
-
-        // Close mobile menu when clicking nav links
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            });
-        });
-
-        // IntersectionObserver for highlighting active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
-                const sectionHeight = section.offsetHeight;
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-indigo-400', 'bg-slate-800/80');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('text-indigo-400', 'bg-slate-800/80');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

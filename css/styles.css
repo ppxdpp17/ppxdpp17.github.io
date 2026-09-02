@@ -1,35 +1,50 @@
-/* Pedro Duarte Portfolio - Minimalist Modern Dark Theme */
+/* Pedro Duarte Portfolio Styles */
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #0b0f19;
-    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #090d16;
+    color: #f1f5f9;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Header Navigation */
+/* Opaque Header Navigation */
 .site-header {
-    background-color: rgba(11, 15, 25, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: #090d16; /* Completely opaque header */
     border-bottom: 1px solid #1e293b;
 }
 
-/* Clean Card Surface */
-.clean-card {
+/* Interactive Card Surface */
+.interactive-card {
     background-color: #111827;
     border: 1px solid #1e293b;
-    transition: border-color 0.2s ease;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.25s ease, 
+                box-shadow 0.25s ease;
 }
 
-.clean-card:hover {
-    border-color: #334155;
+.interactive-card:hover {
+    transform: translateY(-4px);
+    border-color: #4f46e5;
+    box-shadow: 0 12px 28px -10px rgba(79, 70, 229, 0.2);
 }
 
-/* Left Accent Borders for Experience & Education */
+/* Interactive Buttons & Micro-Animations */
+.interactive-btn {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interactive-btn:hover {
+    transform: translateY(-2px);
+}
+
+.interactive-btn:active {
+    transform: translateY(0);
+}
+
+/* Left Accent Borders for Timeline */
 .experience-card {
     border-left: 3px solid #6366f1;
 }
@@ -41,5 +56,5 @@ h1, h2, h3, h4, h5, h6 {
 /* Active Nav Indicator */
 .nav-link.active {
     color: #818cf8;
-    background-color: rgba(30, 41, 59, 0.5);
+    background-color: rgba(30, 41, 59, 0.6);
 }

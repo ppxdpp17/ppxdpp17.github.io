@@ -41,18 +41,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const highlightActiveNav = () => {
         let currentSectionId = '';
-        const scrollPosition = window.scrollY + 140;
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
+        // Force contact section if scrolled to the absolute bottom of page
+        if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 80) {
+            currentSectionId = 'contact';
+        } else {
+            const scrollPosition = window.scrollY + 160;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+        }
 
         navLinks.forEach(link => {
-            link.classList.remove('active', 'text-indigo-400');
+            link.classList.remove('active');
             if (link.getAttribute('href') === `#${currentSectionId}`) {
                 link.classList.add('active');
             }

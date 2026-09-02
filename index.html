@@ -9,10 +9,10 @@
     <meta name="author" content="Pedro Duarte">
     <title>Pedro Duarte | Software Developer</title>
 
-    <!-- Google Fonts: Outfit & Inter -->
+    <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -28,8 +28,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
                     }
                 }
             }
@@ -42,12 +42,12 @@
 
 <body class="min-h-screen text-slate-200 antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- Sticky Navigation Header -->
+    <!-- Opaque Sticky Navigation Header -->
     <header class="sticky top-0 z-50 site-header transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <!-- Logo -->
-                <a href="#about" class="text-xl font-bold font-heading text-white tracking-wide hover:text-indigo-400 transition-colors">
+                <a href="#about" class="text-xl sm:text-2xl font-bold font-heading text-white tracking-wide hover:text-indigo-400 transition-colors">
                     Pedro Duarte
                 </a>
 
@@ -58,27 +58,27 @@
                     <a href="#projects" class="nav-link px-3.5 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-all">Projects</a>
                     <a href="#skills" class="nav-link px-3.5 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-all">Skills</a>
                     <a href="#contact" class="nav-link px-3.5 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-all">Contact</a>
-                    <a href="mailto:pedrosapageduarte@hotmail.com" class="ml-3 px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-all">
+                    <a href="mailto:pedrosapageduarte@hotmail.com" class="ml-3 px-4.5 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl interactive-btn shadow-md shadow-indigo-600/20">
                         Get in Touch
                     </a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white transition-colors" aria-label="Toggle menu">
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-xl bg-slate-800/60 text-slate-300 hover:text-white transition-colors" aria-label="Toggle menu">
                     <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Nav Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950 px-4 pt-2 pb-6 space-y-2">
-            <a href="#about" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg">About</a>
-            <a href="#experience" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg">Experience & Education</a>
-            <a href="#projects" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg">Projects</a>
-            <a href="#skills" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg">Skills</a>
-            <a href="#contact" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-[#090d16] px-4 pt-2 pb-6 space-y-2">
+            <a href="#about" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl">About</a>
+            <a href="#experience" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl">Experience & Education</a>
+            <a href="#projects" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl">Projects</a>
+            <a href="#skills" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl">Skills</a>
+            <a href="#contact" class="mobile-nav-link block px-4 py-2.5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-xl">Contact</a>
             <div class="pt-2">
-                <a href="mailto:pedrosapageduarte@hotmail.com" class="block w-full text-center px-4 py-2.5 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg">
+                <a href="mailto:pedrosapageduarte@hotmail.com" class="block w-full text-center px-4 py-2.5 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl">
                     Get in Touch
                 </a>
             </div>
@@ -92,14 +92,14 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left Column: Bio & Intro -->
-                <div class="lg:col-span-7 space-y-6">
+                <div class="lg:col-span-7 space-y-6 text-left">
                     <div class="space-y-3">
                         <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase font-mono">Portfolio</span>
-                        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight font-heading">
                             Pedro Manuel Duarte
                         </h1>
                         <h2 class="text-xl sm:text-2xl font-medium text-slate-300">
-                            Junior Software Developer <span class="text-slate-600 mx-1">|</span> MSc in Informatics Engineering
+                            Junior Software Developer <span class="text-indigo-500 mx-1">|</span> MSc in Informatics Engineering
                         </h2>
                     </div>
 
@@ -110,34 +110,34 @@
 
                     <!-- Action Links & Socials -->
                     <div class="pt-2 flex flex-wrap items-center gap-4">
-                        <a href="#projects" class="px-5 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-colors flex items-center gap-2">
+                        <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm sm:text-base interactive-btn shadow-lg shadow-indigo-600/20 flex items-center gap-2 group">
                             <span>Explore Projects</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                         </a>
 
-                        <a href="#contact" class="px-5 py-3 rounded-lg clean-card text-slate-200 hover:text-white text-sm transition-colors">
+                        <a href="#contact" class="px-6 py-3 rounded-xl interactive-card text-slate-200 hover:text-white font-medium text-sm sm:text-base">
                             Contact Me
                         </a>
 
                         <div class="flex items-center gap-3 border-l border-slate-800 pl-4 ml-2">
-                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg clean-card flex items-center justify-center text-slate-400 hover:text-white transition-colors" title="GitHub" aria-label="GitHub Profile">
-                                <i class="fa-brands fa-github text-lg"></i>
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl interactive-card flex items-center justify-center text-slate-400 hover:text-white transition-colors hover:scale-105" title="GitHub" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github text-xl"></i>
                             </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg clean-card flex items-center justify-center text-slate-400 hover:text-white transition-colors" title="LinkedIn" aria-label="LinkedIn Profile">
-                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl interactive-card flex items-center justify-center text-slate-400 hover:text-white transition-colors hover:scale-105" title="LinkedIn" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in text-xl"></i>
                             </a>
-                            <a href="mailto:pedrosapageduarte@hotmail.com" class="w-10 h-10 rounded-lg clean-card flex items-center justify-center text-slate-400 hover:text-white transition-colors" title="Email" aria-label="Send Email">
-                                <i class="fa-solid fa-envelope text-lg"></i>
+                            <a href="mailto:pedrosapageduarte@hotmail.com" class="w-11 h-11 rounded-xl interactive-card flex items-center justify-center text-slate-400 hover:text-white transition-colors hover:scale-105" title="Email" aria-label="Send Email">
+                                <i class="fa-solid fa-envelope text-xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Clean Profile Photo Container -->
+                <!-- Right Column: Profile Photo Container -->
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="w-full max-w-sm">
-                        <div class="clean-card p-2 rounded-2xl">
-                            <div class="w-full aspect-[4/5] rounded-xl bg-slate-900 overflow-hidden relative flex items-center justify-center border border-slate-800">
+                        <div class="interactive-card p-3 rounded-3xl">
+                            <div class="w-full aspect-[4/5] rounded-2xl bg-slate-900 overflow-hidden relative flex items-center justify-center border border-slate-800">
                                 <!-- Profile Image -->
                                 <img src="assets/images/profile.jpg" 
                                      alt="Pedro Duarte" 
@@ -146,11 +146,11 @@
                                 
                                 <!-- Fallback Placeholder -->
                                 <div id="photo-placeholder" class="hidden flex flex-col items-center justify-center p-6 text-center space-y-4">
-                                    <div class="w-20 h-20 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 text-3xl">
+                                    <div class="w-20 h-20 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-indigo-400 text-3xl shadow-inner">
                                         <i class="fa-solid fa-user"></i>
                                     </div>
                                     <div class="space-y-1">
-                                        <p class="text-sm font-medium text-slate-200">Pedro Duarte</p>
+                                        <p class="text-sm font-semibold text-slate-200">Pedro Duarte</p>
                                         <p class="text-xs text-slate-500 font-mono">assets/images/profile.jpg</p>
                                     </div>
                                 </div>
@@ -163,10 +163,10 @@
         </section>
 
         <!-- Education & Professional Experience -->
-        <section id="experience" class="scroll-mt-24 space-y-10">
-            <div class="space-y-2">
+        <section id="experience" class="scroll-mt-24 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
                 <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase font-mono">Career Pathway</span>
-                <h2 class="text-3xl font-extrabold text-white">Experience & Education</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">Experience & Education</h2>
                 <p class="text-slate-400 text-sm sm:text-base">Professional Experience (Research Grants) and Academic Degree Trajectory at UTAD.</p>
             </div>
 
@@ -175,41 +175,41 @@
                 
                 <!-- Column 1: Professional Experience -->
                 <div class="space-y-6">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
-                        <div class="w-9 h-9 rounded-lg bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 text-base">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-950/70 border border-indigo-800/50 flex items-center justify-center text-indigo-400 text-lg">
                             <i class="fa-solid fa-briefcase"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white">Professional Experience</h3>
+                            <h3 class="text-2xl font-bold text-white font-heading">Professional Experience</h3>
                             <p class="text-xs text-indigo-400 font-medium">R&D Grants</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <div class="clean-card p-5 rounded-xl experience-card space-y-2">
+                        <div class="interactive-card p-6 rounded-2xl experience-card space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
-                                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-indigo-950/80 text-indigo-300 border border-indigo-800/30">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-950/80 text-indigo-300 border border-indigo-800/40 font-mono">
                                     Oct 2025 - Jun 2026
                                 </span>
                                 <span class="text-xs font-mono text-slate-500">Grant BI/UTAD/54/2025</span>
                             </div>
-                            <h4 class="text-lg font-bold text-white">Researcher & Software Developer</h4>
-                            <p class="text-indigo-300 text-xs font-medium">Software Integration Team &mdash; A-MoVeR Green Mobility Project</p>
-                            <p class="text-slate-400 text-sm leading-relaxed pt-1">
+                            <h4 class="text-xl font-bold text-white">Researcher & Software Developer</h4>
+                            <p class="text-indigo-300 text-sm font-medium">Software Integration Team &mdash; A-MoVeR Green Mobility Project</p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
                                 Integrated into the software integration team for the A-MoVeR green mobility project, focusing on software components, system integration, and vehicle telemetry architectures.
                             </p>
                         </div>
 
-                        <div class="clean-card p-5 rounded-xl experience-card space-y-2">
+                        <div class="interactive-card p-6 rounded-2xl experience-card space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
-                                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-indigo-950/80 text-indigo-300 border border-indigo-800/30">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-950/80 text-indigo-300 border border-indigo-800/40 font-mono">
                                     Mar 2024 - Mar 2025
                                 </span>
                                 <span class="text-xs font-mono text-slate-500">Grant BII/UTAD/8/23</span>
                             </div>
-                            <h4 class="text-lg font-bold text-white">Researcher & Software Developer</h4>
-                            <p class="text-indigo-300 text-xs font-medium">Rider Support & Safety Team &mdash; A-MoVeR Project</p>
-                            <p class="text-slate-400 text-sm leading-relaxed pt-1">
+                            <h4 class="text-xl font-bold text-white">Researcher & Software Developer</h4>
+                            <p class="text-indigo-300 text-sm font-medium">Rider Support & Safety Team &mdash; A-MoVeR Project</p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
                                 Contributed to rider support and safety solutions by engineering IoT assistance devices and Advanced Rider Assistance Systems (ARAS) for motorcycle platforms.
                             </p>
                         </div>
@@ -218,39 +218,39 @@
 
                 <!-- Column 2: Education -->
                 <div class="space-y-6">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
-                        <div class="w-9 h-9 rounded-lg bg-purple-950/60 border border-purple-800/40 flex items-center justify-center text-purple-400 text-base">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-purple-950/70 border border-purple-800/50 flex items-center justify-center text-purple-400 text-lg">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white">Education</h3>
+                            <h3 class="text-2xl font-bold text-white font-heading">Education</h3>
                             <p class="text-xs text-purple-400 font-medium">Academic Degrees</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <div class="clean-card p-5 rounded-xl education-card space-y-2">
+                        <div class="interactive-card p-6 rounded-2xl education-card space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
-                                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-800/30">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-purple-950/80 text-purple-300 border border-purple-800/40 font-mono">
                                     Sep 2024 - Current
                                 </span>
                             </div>
-                            <h4 class="text-lg font-bold text-white">MSc in Informatics Engineering</h4>
-                            <p class="text-purple-300 text-xs font-medium">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
-                            <p class="text-slate-400 text-sm leading-relaxed pt-1">
+                            <h4 class="text-xl font-bold text-white">MSc in Informatics Engineering</h4>
+                            <p class="text-purple-300 text-sm font-medium">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
                                 Advanced master's specialization focused on distributed systems, software engineering methodologies, intelligent systems, and mobile technology applications.
                             </p>
                         </div>
 
-                        <div class="clean-card p-5 rounded-xl education-card space-y-2">
+                        <div class="interactive-card p-6 rounded-2xl education-card space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
-                                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-800/30">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-purple-950/80 text-purple-300 border border-purple-800/40 font-mono">
                                     Aug 2021 - Jun 2024
                                 </span>
                             </div>
-                            <h4 class="text-lg font-bold text-white">BSc in Informatics Engineering</h4>
-                            <p class="text-purple-300 text-xs font-medium">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
-                            <p class="text-slate-400 text-sm leading-relaxed pt-1">
+                            <h4 class="text-xl font-bold text-white">BSc in Informatics Engineering</h4>
+                            <p class="text-purple-300 text-sm font-medium">Universidade de Trás-os-Montes e Alto Douro (UTAD)</p>
+                            <p class="text-slate-400 text-sm leading-relaxed">
                                 Core engineering degree covering object-oriented programming, data structures, algorithms, databases, computer networks, graphics, and full-stack software development.
                             </p>
                         </div>
@@ -261,23 +261,23 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="scroll-mt-24 space-y-10">
-            <div class="space-y-2">
+        <section id="projects" class="scroll-mt-24 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
                 <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase font-mono">Portfolio</span>
-                <h2 class="text-3xl font-extrabold text-white">Featured Projects</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">Featured Projects</h2>
                 <p class="text-slate-400 text-sm sm:text-base">A selection of research projects, mobile applications, web applications, AI systems, games, and more.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 
                 <!-- Project 1 -->
-                <div class="clean-card p-6 rounded-xl flex flex-col justify-between space-y-6">
-                    <div class="space-y-3">
+                <div class="interactive-card p-6 rounded-2xl flex flex-col justify-between space-y-6 group">
+                    <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-mono text-indigo-400 font-semibold">Mobile / Telemetry</span>
-                            <i class="fa-solid fa-mobile-screen text-slate-500"></i>
+                            <i class="fa-solid fa-mobile-screen text-slate-500 text-lg group-hover:text-indigo-400 transition-colors"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">
                             Android Application for Motorcycle Telemetry and Data Acquisition
                         </h3>
                         <p class="text-slate-400 text-sm leading-relaxed">
@@ -286,12 +286,12 @@
                     </div>
                     <div class="space-y-4 pt-2">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Android</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Java/Kotlin</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Telemetry</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Android</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Java/Kotlin</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Telemetry</span>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
                                 <span>View Repository</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
@@ -300,13 +300,13 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="clean-card p-6 rounded-xl flex flex-col justify-between space-y-6">
-                    <div class="space-y-3">
+                <div class="interactive-card p-6 rounded-2xl flex flex-col justify-between space-y-6 group">
+                    <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-mono text-purple-400 font-semibold">ARAS / IoT</span>
-                            <i class="fa-solid fa-microchip text-slate-500"></i>
+                            <i class="fa-solid fa-microchip text-slate-500 text-lg group-hover:text-purple-400 transition-colors"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">
+                        <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
                             Development and Integration of IoT Devices for Motorcycle Rider Assistance (ARAS)
                         </h3>
                         <p class="text-slate-400 text-sm leading-relaxed">
@@ -315,12 +315,12 @@
                     </div>
                     <div class="space-y-4 pt-2">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">C/C++</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">IoT</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Docker</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">C/C++</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">IoT</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Docker</span>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
                                 <span>View Repository</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
@@ -329,13 +329,13 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="clean-card p-6 rounded-xl flex flex-col justify-between space-y-6">
-                    <div class="space-y-3">
+                <div class="interactive-card p-6 rounded-2xl flex flex-col justify-between space-y-6 group">
+                    <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-mono text-cyan-400 font-semibold">Full-Stack Web</span>
-                            <i class="fa-solid fa-pizza-slice text-slate-500"></i>
+                            <i class="fa-solid fa-pizza-slice text-slate-500 text-lg group-hover:text-cyan-400 transition-colors"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                             Pizzeria Concept Website
                         </h3>
                         <p class="text-slate-400 text-sm leading-relaxed">
@@ -344,11 +344,11 @@
                     </div>
                     <div class="space-y-4 pt-2">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">MERN</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Node.js</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">MERN</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Node.js</span>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
                                 <span>View Repository</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
@@ -357,13 +357,13 @@
                 </div>
 
                 <!-- Project 4 -->
-                <div class="clean-card p-6 rounded-xl flex flex-col justify-between space-y-6">
-                    <div class="space-y-3">
+                <div class="interactive-card p-6 rounded-2xl flex flex-col justify-between space-y-6 group">
+                    <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-mono text-emerald-400 font-semibold">Graphics / WebGL</span>
-                            <i class="fa-solid fa-chess-board text-slate-500"></i>
+                            <i class="fa-solid fa-chess-board text-slate-500 text-lg group-hover:text-emerald-400 transition-colors"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">
+                        <h3 class="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors">
                             "Go" Board Game - Developed with Three.js
                         </h3>
                         <p class="text-slate-400 text-sm leading-relaxed">
@@ -372,12 +372,12 @@
                     </div>
                     <div class="space-y-4 pt-2">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Three.js</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">JavaScript</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">WebGL</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Three.js</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">JavaScript</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">WebGL</span>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
                                 <span>View Repository</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
@@ -386,13 +386,13 @@
                 </div>
 
                 <!-- Project 5 -->
-                <div class="clean-card p-6 rounded-xl flex flex-col justify-between space-y-6">
-                    <div class="space-y-3">
+                <div class="interactive-card p-6 rounded-2xl flex flex-col justify-between space-y-6 group">
+                    <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-mono text-amber-400 font-semibold">AI / Machine Learning</span>
-                            <i class="fa-solid fa-brain text-slate-500"></i>
+                            <i class="fa-solid fa-brain text-slate-500 text-lg group-hover:text-amber-400 transition-colors"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">
+                        <h3 class="text-xl font-bold text-white group-hover:text-amber-300 transition-colors">
                             Esports Betting Prediction AI Model
                         </h3>
                         <p class="text-slate-400 text-sm leading-relaxed">
@@ -401,12 +401,12 @@
                     </div>
                     <div class="space-y-4 pt-2">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Python</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Scikit-Learn</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Data Science</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Python</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Scikit-Learn</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Data Science</span>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
                                 <span>View Repository</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
@@ -415,13 +415,13 @@
                 </div>
 
                 <!-- Project 6 -->
-                <div class="clean-card p-6 rounded-xl flex flex-col justify-between space-y-6">
-                    <div class="space-y-3">
+                <div class="interactive-card p-6 rounded-2xl flex flex-col justify-between space-y-6 group">
+                    <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-mono text-rose-400 font-semibold">Game Development</span>
-                            <i class="fa-solid fa-gamepad text-slate-500"></i>
+                            <i class="fa-solid fa-gamepad text-slate-500 text-lg group-hover:text-rose-400 transition-colors"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">
+                        <h3 class="text-xl font-bold text-white group-hover:text-rose-300 transition-colors">
                             CoD Zombies-style Game - Developed in Unity
                         </h3>
                         <p class="text-slate-400 text-sm leading-relaxed">
@@ -430,12 +430,12 @@
                     </div>
                     <div class="space-y-4 pt-2">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Unity</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">C#</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Game Dev</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Unity</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">C#</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs text-slate-300 border border-slate-800 font-mono">Game Dev</span>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                            <a href="https://github.com/ppxdpp17" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
                                 <span>View Repository</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
@@ -447,99 +447,115 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="scroll-mt-24 space-y-10">
-            <div class="space-y-2">
+        <section id="skills" class="scroll-mt-24 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
                 <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase font-mono">Technical Capabilities</span>
-                <h2 class="text-3xl font-extrabold text-white">Skills & Toolkit</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">Skills & Toolkit</h2>
                 <p class="text-slate-400 text-sm sm:text-base">Technologies & Programming Languages I work with.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
                 <!-- Category 1: Languages -->
-                <div class="clean-card rounded-xl p-6 space-y-5">
+                <div class="interactive-card rounded-2xl p-6 sm:p-8 space-y-6">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center text-indigo-400 text-sm">
+                        <div class="w-10 h-10 rounded-xl bg-slate-800/80 flex items-center justify-center text-indigo-400 text-lg">
                             <i class="fa-solid fa-code"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Languages</h3>
+                        <h3 class="text-2xl font-bold text-white font-heading">Languages</h3>
                     </div>
 
-                    <div class="flex flex-wrap gap-2.5">
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">C / C++</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">C#</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">Python</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">Java</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">SQL</span>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-indigo-500/50 hover:text-indigo-300 transition-all hover:scale-105">C / C++</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-indigo-500/50 hover:text-indigo-300 transition-all hover:scale-105">C#</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-indigo-500/50 hover:text-indigo-300 transition-all hover:scale-105">Python</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-indigo-500/50 hover:text-indigo-300 transition-all hover:scale-105">Java</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-indigo-500/50 hover:text-indigo-300 transition-all hover:scale-105">SQL</span>
                     </div>
                 </div>
 
                 <!-- Category 2: Technologies & Tools -->
-                <div class="clean-card rounded-xl p-6 space-y-5">
+                <div class="interactive-card rounded-2xl p-6 sm:p-8 space-y-6">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center text-purple-400 text-sm">
+                        <div class="w-10 h-10 rounded-xl bg-slate-800/80 flex items-center justify-center text-purple-400 text-lg">
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Technologies & Tools</h3>
+                        <h3 class="text-2xl font-bold text-white font-heading">Technologies & Tools</h3>
                     </div>
 
-                    <div class="flex flex-wrap gap-2.5">
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">.NET</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">Docker</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">Git / GitHub</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">Visual Studio</span>
-                        <span class="px-3.5 py-1.5 rounded bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">Android Studio</span>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-purple-500/50 hover:text-purple-300 transition-all hover:scale-105">.NET</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-purple-500/50 hover:text-purple-300 transition-all hover:scale-105">Docker</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-purple-500/50 hover:text-purple-300 transition-all hover:scale-105">Git / GitHub</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-purple-500/50 hover:text-purple-300 transition-all hover:scale-105">Visual Studio</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-purple-500/50 hover:text-purple-300 transition-all hover:scale-105">Android Studio</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="scroll-mt-24 space-y-10">
-            <div class="clean-card rounded-2xl p-8 sm:p-10 space-y-8">
-                <div class="space-y-2 max-w-xl">
+        <!-- Contact Section (Increased Height & Visibility) -->
+        <section id="contact" class="scroll-mt-24 pt-8 pb-20 min-h-[60vh] flex flex-col justify-center">
+            <div class="interactive-card rounded-3xl p-8 sm:p-12 space-y-10">
+                <div class="text-center space-y-3 max-w-2xl mx-auto">
                     <span class="text-indigo-400 text-sm font-semibold tracking-wider uppercase font-mono">Contact</span>
-                    <h2 class="text-3xl font-extrabold text-white">Let's Connect & Collaborate</h2>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">Let's Connect & Collaborate</h2>
                     <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
                         Interested in working together or discussing engineering opportunities? Feel free to reach out directly via email, phone, or LinkedIn.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Email Card -->
-                    <a href="mailto:pedrosapageduarte@hotmail.com" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors flex items-start gap-3">
-                        <i class="fa-solid fa-envelope text-indigo-400 mt-1"></i>
+                    <a href="mailto:pedrosapageduarte@hotmail.com" class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 flex flex-col justify-between gap-4 group">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-950/80 border border-indigo-800/40 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-envelope text-lg"></i>
+                        </div>
                         <div class="overflow-hidden">
                             <span class="block text-xs text-slate-500 font-mono">Email</span>
-                            <span class="text-xs sm:text-sm font-medium text-slate-200 truncate block">pedrosapageduarte@hotmail.com</span>
+                            <span class="text-xs sm:text-sm font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors truncate block">
+                                pedrosapageduarte@hotmail.com
+                            </span>
                         </div>
                     </a>
 
                     <!-- LinkedIn Card -->
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors flex items-start gap-3">
-                        <i class="fa-brands fa-linkedin-in text-indigo-400 mt-1"></i>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 flex flex-col justify-between gap-4 group">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-950/80 border border-indigo-800/40 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </div>
                         <div>
                             <span class="block text-xs text-slate-500 font-mono">LinkedIn</span>
-                            <span class="text-sm font-medium text-slate-200">Pedro Duarte</span>
+                            <span class="text-sm font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors">
+                                Pedro Duarte
+                            </span>
                         </div>
                     </a>
 
                     <!-- Phone Card -->
-                    <a href="tel:+351967373614" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors flex items-start gap-3">
-                        <i class="fa-solid fa-phone text-indigo-400 mt-1"></i>
+                    <a href="tel:+351967373614" class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1 flex flex-col justify-between gap-4 group">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-950/80 border border-indigo-800/40 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                        </div>
                         <div>
                             <span class="block text-xs text-slate-500 font-mono">Phone</span>
-                            <span class="text-sm font-medium text-slate-200">(+351) 967373614</span>
+                            <span class="text-sm font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors">
+                                (+351) 967373614
+                            </span>
                         </div>
                     </a>
 
                     <!-- Location Card -->
-                    <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
-                        <i class="fa-solid fa-location-dot text-indigo-400 mt-1"></i>
+                    <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-950/80 border border-indigo-800/40 flex items-center justify-center text-indigo-400">
+                            <i class="fa-solid fa-location-dot text-lg"></i>
+                        </div>
                         <div>
                             <span class="block text-xs text-slate-500 font-mono">Location</span>
-                            <span class="text-sm font-medium text-slate-200">Vila Real, Portugal</span>
+                            <span class="text-sm font-semibold text-slate-200">
+                                Vila Real, Portugal
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -549,7 +565,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800/80 py-8 text-slate-500 text-xs sm:text-sm">
+    <footer class="border-t border-slate-800/80 py-8 bg-[#090d16] text-slate-500 text-xs sm:text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>&copy; <span id="current-year"></span> Pedro Duarte. All rights reserved.</p>
             <div class="flex items-center gap-4 text-slate-400">

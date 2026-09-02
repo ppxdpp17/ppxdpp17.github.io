@@ -1,0 +1,52 @@
+/* Pedro Duarte Portfolio Styles */
+
+body {
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #090d16;
+    color: #f1f5f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Opaque Header Navigation */
+.site-header {
+    background-color: #090d16;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Card Surface with Hover Animations */
+.clean-card {
+    background-color: #111827;
+    border: 1px solid #1e293b;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.25s ease, 
+                box-shadow 0.25s ease;
+}
+
+.clean-card:hover {
+    transform: translateY(-3px);
+    border-color: #6366f1;
+    box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.2);
+}
+
+/* Timeline Left Accents */
+.experience-card {
+    border-left: 3px solid #6366f1;
+}
+
+.education-card {
+    border-left: 3px solid #a855f7;
+}
+
+/* Active Nav Link Highlight */
+.nav-link.active {
+    color: #818cf8;
+    background-color: rgba(30, 41, 59, 0.6);
+}
+
+/* Alternating Section Background */
+.section-alt {
+    background-color: #0c111d;
+}
